@@ -1,0 +1,16 @@
+<form action="/profile" method="POST" enctype="multipart/form-data">
+  <input type="text" placeholder="Name" name="fullname" />
+  <br />
+  <input type="text" placeholder="Email" name="email" />
+  <br />
+  <input type="file" name="profilepic" />
+  <br />
+  <button type="submit">Upload</button>
+</form>
+
+{{#each data}}
+  <div>
+    <h3>Name: {{this.fullname}} </h3>
+    <img src="{{this.path}}" alt="" />
+  </div>
+{{/each}}
